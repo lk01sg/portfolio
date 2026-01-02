@@ -1,6 +1,6 @@
 # Data Directory
 
-This folder contains datasets used in the PhD portfolio. The goal is to keep raw data, processed data, small samples for demos, and references to external datasets clearly separated to support reproducible research.
+This folder contains datasets used in the portfolio. The goal is to keep raw data, processed data, small samples for demos, and references to external datasets clearly separated to support reproducible research.
 
 ---
 

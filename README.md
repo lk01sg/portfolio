@@ -1,6 +1,6 @@
-# PhD Portfolio Repository
+# Portfolio Repository
 
-This repository contains the research workflow, drafts, and resources for my PhD journey.
+This repository contains the research workflow, drafts, and resources.
 It is structured to separate data, analysis, manuscripts, and documentation for better organization and reproducibility.
 
 ---
@@ -17,7 +17,7 @@ It is structured to separate data, analysis, manuscripts, and documentation for 
 ├─ /notebooks/      # exploratory and analysis notebooks (Quarto / Jupyter)
 ├─ /src/            # reusable scripts, utilities, and analysis pipelines
 ├─ /manuscripts/    # drafts of papers, figures, and supplementary materials
-├─ /docs/           # documentation and website build for the PhD portfolio
+├─ /docs/           # documentation and website build
 ├─ /results/        # outputs generated from analysis: figures, tables, models, etc.
 ├─ /env/            # environment specifications (environment.yml / requirements.txt)
 └─ README.md        # this file
@@ -32,7 +32,7 @@ To set up and run the repository locally:
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/lk01sg/phd-portfolio.git
+   git clone https://github.com/lk01sg/portfolio.git
    cd phd-portfolio
    ```
 
@@ -68,7 +68,7 @@ To set up and run the repository locally:
 * Outputs such as figures, models, and tables are stored in `/results/`.
 * Drafts of papers are stored in `/manuscripts/`.
 * Documentation and the public site are built from `/docs/` and published via GitHub Pages:
-  👉 [https://lk01sg.github.io/phd-portfolio](https://lk01sg.github.io/phd-portfolio)
+  👉 [https://lk01sg.github.io/portfolio](https://lk01sg.github.io/portfolio)
 
 ---
 
@@ -85,12 +85,12 @@ To set up and run the repository locally:
 **License**: MIT License (see `LICENSE` file for details).
 
 For reuse of code, figures, or any other inquiries:
-📧 [lksingagerda@outlook.co.id](mailto:lksingagerda@outlook.co.id)
+📧 [lk01sg@protonmail.com](mailto:lk01sg@protonmail.com)
 
 ---
 
 ## Quick Links
 
-* Project site: [https://lk01sg.github.io/phd-portfolio](https://lk01sg.github.io/phd-portfolio)
+* Project site: [https://lk01sg.github.io/portfolio](https://lk01sg.github.io/portfolio)
 * Data documentation: `/data/README.md`
 * Example notebook workflow: `/notebooks/example_workflow.ipynb`
