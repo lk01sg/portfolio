@@ -33,7 +33,7 @@ To set up and run the repository locally:
 
    ```bash
    git clone https://github.com/lk01sg/portfolio.git
-   cd phd-portfolio
+   cd portfolio
    ```
 
 2. **Set up the environment**
@@ -41,7 +41,7 @@ To set up and run the repository locally:
    ```bash
    # with conda
    conda env create -f env/environment.yml
-   conda activate phd-portfolio
+   conda activate portfolio
 
    # or with pip
    pip install -r env/requirements.txt
