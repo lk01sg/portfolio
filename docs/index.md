@@ -1,9 +1,9 @@
 ---
 layout: default
-title: PhD Portfolio
+title: Portfolio
 ---
 
-# PhD Portfolio
+# Portfolio
 
 Welcome to my research portfolio and documentation site.
 

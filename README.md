@@ -63,7 +63,7 @@ This repository contains my research workflow, analysis notebooks, manuscripts, 
 │   ├─ /models/              # trained model checkpoints
 │   └─ /metrics/             # evaluation metrics & logs
 │
-├─ /docs/                    # documentation & PhD portfolio website
+├─ /docs/                    # documentation & portfolio website
 │   └─ /build/               # generated documentation
 │
 └─ /env/                     # environment specifications
