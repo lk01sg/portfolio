@@ -1,32 +1,182 @@
-# Site settings
+# ==============================================================================
+# Site Settings
+# ==============================================================================
 title: Portfolio
-description: Research portfolio and documentation
+tagline: Systems Biology & Computational Modeling
+description: >-
+  Analytical portfolio and documentation for systems biology, computational 
+  modeling, and data-driven inquiry at the intersection of life sciences 
+  and analytical methods.
+
 author: lk01sg
 email: lk01sg@protonmail.com
 
-# Build settings
-theme: jekyll-theme-primer
-# or use: minima, jekyll-theme-cayman, jekyll-theme-minimal, etc.
-
-# URLs
+# ==============================================================================
+# URLs & Paths
+# ==============================================================================
 baseurl: "/portfolio"
 url: "https://lk01sg.github.io"
+repository: lk01sg/portfolio
 
-# Exclude from processing
+# Permalink structure
+permalink: pretty
+
+# ==============================================================================
+# Build Settings
+# ==============================================================================
+theme: jekyll-theme-primer
+# Alternative themes:
+# - minima
+# - jekyll-theme-cayman
+# - jekyll-theme-minimal
+# - jekyll-theme-slate
+
+# Markdown processor
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    default_lang: python
+    css_class: 'highlight'
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..3
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+
+# Highlighting
+highlighter: rouge
+
+# ==============================================================================
+# Collections (optional - for organizing content)
+# ==============================================================================
+# collections:
+#   notebooks:
+#     output: true
+#     permalink: /notebooks/:name
+#   experiments:
+#     output: true
+#     permalink: /experiments/:name
+
+# ==============================================================================
+# Defaults (optional - for front matter defaults)
+# ==============================================================================
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  # - scope:
+  #     path: ""
+  #     type: "notebooks"
+  #   values:
+  #     layout: "notebook"
+
+# ==============================================================================
+# Plugins
+# ==============================================================================
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-github-metadata
+  # - jekyll-mentions
+  # - jekyll-relative-links
+
+# ==============================================================================
+# SEO & Social
+# ==============================================================================
+twitter:
+  username: lk01sg
+  card: summary
+
+# social:
+#   name: lk01sg
+#   links:
+#     - https://github.com/lk01sg
+
+# Google Analytics (uncomment and add tracking ID if needed)
+# google_analytics: UA-XXXXXXXX-X
+
+# ==============================================================================
+# Exclude from Processing
+# ==============================================================================
 exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
   - node_modules
   - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - package.json
+  - package-lock.json
+  - yarn.lock
+  - LICENSE
+  - CNAME
+  - .gitignore
+  - .git
+  - .vscode
+  - .DS_Store
 
-# Markdown settings
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+# Include specific files that would normally be excluded
+# include:
+#   - .htaccess
 
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+# ==============================================================================
+# Site Navigation (optional - depending on theme support)
+# ==============================================================================
+# navigation:
+#   - title: Home
+#     url: /
+#   - title: Notebooks
+#     url: /notebooks/
+#   - title: Experiments
+#     url: /experiments/
+#   - title: About
+#     url: /about/
+
+# ==============================================================================
+# Other Settings
+# ==============================================================================
+# Timezone
+timezone: Asia/Jakarta
+
+# Language
+lang: en
+
+# Encoding
+encoding: utf-8
+
+# Liquid options
+liquid:
+  error_mode: warn
+  strict_filters: false
+  strict_variables: false
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Comments
+# disqus_shortname: your-disqus-shortname  # uncomment if using Disqus
+
+# ==============================================================================
+# Custom Variables (accessible via site.variable_name in templates)
+# ==============================================================================
+focus_areas:
+  - Systems Immunology
+  - Systems Biology
+  - PK/PD Modeling
+  - Network Pharmacology
+  - Computational Drug Design
+  - Machine Learning
+  - Metascience
+
+github_repo: https://github.com/lk01sg/portfolio
+github_edit_prefix: https://github.com/lk01sg/portfolio/edit/main/docs/

@@ -1,177 +1,197 @@
-# Portfolio Repository
+---
+layout: default
+title: Portfolio
+---
 
-This repository contains my research workflow, analysis notebooks, manuscripts, and documentation. It is structured to separate data, code, manuscripts, experiments, and outputs for better organization and reproducibility.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+# Portfolio
+
+A comprehensive workflow repository for systems biology, computational modeling, and data-driven inquiry at the intersection of life sciences and analytical methods.
+
+## 🔗 Links
+
+- **Portfolio Site**: [lk01sg.github.io/portfolio](https://lk01sg.github.io/portfolio)
+- **GitHub Repository**: [github.com/lk01sg/portfolio](https://github.com/lk01sg/portfolio)
+- **Contact**: [lk01sg@protonmail.com](mailto:lk01sg@protonmail.com)
 
 ---
 
-## Directory Structure
+## 📋 Overview
+
+This repository contains analytical work, computational experiments, and documentation spanning:
+
+- Systems-level modeling and network analysis
+- Computational notebooks for exploratory inquiry
+- Reusable analytical modules and utilities
+- Literature synthesis and conceptual frameworks
+- Model development and evaluation
+- Documentation of methodological approaches
+
+The structure emphasizes reproducibility, conceptual clarity, and careful documentation of assumptions and limitations inherent in computational approaches to biological complexity.
+
+---
+
+## 🔬 Focus Areas
+
+- **Systems Immunology**: Network-level understanding of immune responses and regulatory mechanisms
+- **Systems Biology**: Integrative approaches to biological networks and pathway analysis
+- **PK/PD Modeling**: Pharmacokinetic and pharmacodynamic modeling frameworks
+- **Network Pharmacology**: Multi-target and systems-level drug action
+- **Computational Drug Design**: Structure-based and ligand-based approaches
+- **Machine Learning**: Ensemble methods and deep learning applied to biological data with attention to model limitations
+- **Metascience**: Research methodology, reproducibility, and epistemic considerations in computational biology
+
+---
+
+## 🛠️ Tech Stack
+
+**Core Tools**:
+- Python 3.11 (NumPy, Pandas, SciPy, Scikit-learn)
+- Jupyter Lab for iterative analysis and documentation
+- BioPython & RDKit for cheminformatics and structural biology
+
+**Modeling & Analysis**:
+- Scikit-learn, XGBoost, LightGBM for predictive modeling
+- PyTorch for deep learning applications
+- Statsmodels for statistical inference
+
+**Visualization**:
+- Matplotlib, Seaborn, Plotly for exploratory and publication-quality figures
+
+**Documentation & Reproducibility**:
+- Jekyll for documentation sites
+- Conda for environment management
+- Version control with Git
+
+---
+
+## 📊 Repository Structure
 
 ```
-/ (root)
-├─ README.md
-├─ .gitignore
-│
-├─ /admin/
-│   └─ /progress-reports/
-│
-├─ /code/
-│   ├─ /notebooks/           # exploratory & analysis (Jupyter/Quarto)
-│   ├─ /src/                 # reusable modules & utilities
-│   ├─ /scripts/             # standalone scripts (training, preprocessing, etc.)
-│   └─ /tests/               # unit tests & integration tests
-│
-├─ /data/
-│   ├─ /raw/                 # original, unmodified datasets
-│   ├─ /processed/           # cleaned & transformed datasets
-│   ├─ /sample/              # small subsets for demos/testing
-│   └─ /external/            # references to external resources
-│       ├─ /pretrained-models/
-│       ├─ /embeddings/
-│       └─ /auxiliary-datasets/
-│
-├─ /experiments/
-│   ├─ /exp001-baseline/
-│   ├─ /exp002-improved/
-│   └─ /exp003-deeper-network/
-│
-├─ /literature/
-│   ├─ /papers/
-│   │   ├─ /immunotherapy/
-│   │   ├─ /machine-learning/
-│   │   ├─ /metascience/
-│   │   └─ /network-biology/
-│   ├─ /books/
-│   └─ /notes/               # reading notes & summaries
-│
-├─ /manuscripts/
-│   ├─ /sections/            # chapter drafts (intro, methods, etc.)
-│   ├─ /figures/             # figures for papers
-│   ├─ /tables/              # tables for papers
-│   ├─ /submission/
-│   └─ /appendix/
-│
-├─ /presentations/
-│   ├─ /2026-01-15-proposal-defense/
-│   ├─ /2026-03-20-progress-seminar/
-│   ├─ /2026-07-10-conference-cvpr/
-│   ├─ /2026-10-05-final-defense/
-│   └─ /templates/
-│
-├─ /results/
-│   ├─ /figures/             # generated plots & visualizations
-│   ├─ /tables/              # result tables
-│   ├─ /models/              # trained model checkpoints
-│   └─ /metrics/             # evaluation metrics & logs
-│
-├─ /docs/                    # documentation & portfolio website
-│   └─ /build/               # generated documentation
-│
-└─ /env/                     # environment specifications
-    ├─ environment.yml       # conda environment
-    └─ requirements.txt      # pip dependencies
+portfolio/
+├─ code/          # Analytical code, notebooks, and utilities
+├─ data/          # Data provenance and processing pipelines
+├─ experiments/   # Computational experiments with configs and logs
+├─ literature/    # Organized papers, books, and synthesis notes
+├─ manuscripts/   # Drafts, figures, and analytical memos
+├─ presentations/ # Materials for seminars and collaborative discussions
+├─ results/       # Generated figures, models, and evaluation metrics
+└─ docs/          # Public-facing documentation
 ```
 
 ---
 
-## Getting Started
+## 🎯 Methodological Principles
 
-To set up and run the repository locally:
+### Systems-Level Perspective
+Emphasis on understanding biological complexity through network models, pathway analysis, and mechanistic frameworks rather than purely correlative approaches.
 
-1. **Clone the repo**
+### Reproducibility & Transparency
+- Explicit documentation of analytical assumptions
+- Version-controlled workflows and environment specifications
+- Clear data provenance and transformation steps
 
-   ```bash
-   git clone https://github.com/lk01sg/portfolio.git
-   cd portfolio
-   ```
+### Careful Interpretation
+- Attention to model limitations and uncertainty
+- Critical evaluation of predictive validity
+- Epistemic humility in translating computational results to biological insight
 
-2. **Set up the environment**
-
-   ```bash
-   # with conda
-   conda env create -f env/environment.yml
-   conda activate portfolio
-
-   # or with pip
-   pip install -r env/requirements.txt
-   ```
-
-3. **Run notebooks / analysis**
-
-   * Exploratory notebooks are located in `/code/notebooks/`
-   * Example workflows can be found in the notebooks directory
-
-4. **Build documentation / site**
-
-   ```bash
-   # depending on the toolchain, e.g., Quarto or MkDocs
-   quarto render docs
-   ```
+### Conceptual Clarity
+- Structured experiments with clear hypotheses
+- Documentation that prioritizes understanding over execution speed
+- Synthesis of complex findings into coherent frameworks
 
 ---
 
-## Workflow
+## 📈 Current Focus
 
-* Initial exploration is done in `/code/notebooks/`; stable components are refactored into `/code/src/`.
-* Raw data goes into `/data/raw/`, processed datasets into `/data/processed/`.
-* Each experiment gets its own folder in `/experiments/` with a descriptive name.
-* Outputs such as figures, models, and tables are stored in `/results/`.
-* Literature and reading notes are organized in `/literature/`.
-* Drafts of papers are stored in `/manuscripts/`.
-* Presentations for defenses and conferences are kept in `/presentations/`.
-* Administrative documents like progress reports are in `/admin/`.
-* Documentation and the public site are built from `/docs/` and published via GitHub Pages:
-  👉 [https://lk01sg.github.io/portfolio](https://lk01sg.github.io/portfolio)
+- Active development of analytical frameworks
+- Synthesis of literature across systems biology domains
+- Exploration of machine learning applications with attention to biological realism
+- Documentation continuously refined
+- **Last Updated**: January 2026
 
 ---
 
-## Key Directories Explained
+## 📚 Outputs & Artifacts
 
-### `/code/`
-Contains all executable code organized by purpose:
-- **notebooks/** - Jupyter/Quarto notebooks for exploration and analysis
-- **src/** - Reusable Python modules and utilities
-- **scripts/** - Standalone scripts for training, preprocessing, etc.
-- **tests/** - Unit tests and integration tests
+### Analytical Notebooks
+Exploratory analysis and computational experiments with detailed documentation of rationale, methods, and limitations.
 
-### `/data/`
-Datasets organized by processing stage. See [`/data/README.md`](./data/README.md) for detailed guidelines.
+### Models & Frameworks
+Mechanistic and statistical models developed for systems-level biological questions, with emphasis on interpretability.
 
-### `/experiments/`
-Each experiment has its own folder with configs, logs, and results. Follow the naming convention: `expXXX-description`.
+### Research Memos & Synthesis
+Independent analyses synthesizing scientific developments into coherent frameworks, emphasizing careful interpretation over rapid commentary.
 
-### `/literature/`
-Research papers and books organized by topic, plus reading notes.
-
-### `/manuscripts/`
-Paper drafts, figures, tables, and submission materials.
-
-### `/presentations/`
-Slides and materials for defenses, seminars, and conferences.
-
-### `/results/`
-Generated outputs from experiments and analyses.
+### Visualizations
+Network diagrams, pathway maps, and data visualizations designed to clarify complex biological relationships.
 
 ---
 
-## Current Status
+## 🤝 Collaboration & Inquiry
 
-* 🔧 **In progress**: notebooks, drafts, and workflow refinement
-* ✅ **Stable**: folder structure, environment setup, basic documentation
-* 📅 **Last updated**: January 2026
+This repository is licensed under the MIT License. The work here reflects:
+- Long-horizon research questions
+- Biological realism and mechanistic depth
+- Sustained inquiry over quick iteration
+- Conceptual clarity in computational approaches
 
----
-
-## License & Contact
-
-**License**: MIT License (see `LICENSE` file for details).
-
-For reuse of code, figures, or any other inquiries:
+For thoughtful exchange, collaboration inquiries, or questions about specific analyses:
 📧 [lk01sg@protonmail.com](mailto:lk01sg@protonmail.com)
 
+I welcome engagement with researchers and organizations working on problems in systems biology, computational biology, and science-driven decision support where careful interpretation and model limitations are valued.
+
 ---
 
-## Quick Links
+## 🔄 Development
 
-* Project site: [https://lk01sg.github.io/portfolio](https://lk01sg.github.io/portfolio)
-* Data documentation: [`/data/README.md`](./data/README.md)
-* Environment setup: [`/env/environment.yml`](./env/environment.yml)
+This portfolio evolves alongside my analytical work. Check the [GitHub repository](https://github.com/lk01sg/portfolio) for ongoing developments, new analyses, and updated frameworks.
+
+---
+
+## License & Usage
+
+This repository contains multiple types of content with different licensing:
+
+### Code & Software (MIT License)
+All code, scripts, notebooks, and software tools in this repository are licensed under the [MIT License](LICENSE). This includes:
+- `/code/` - All Python modules, scripts, and utilities
+- Jupyter/Quarto notebooks (code portions)
+- Configuration files and build scripts
+
+You are free to use, modify, and distribute this code with attribution.
+
+### Data & Datasets
+Data in `/data/` may have different licenses depending on source:
+- **Original datasets**: See individual dataset metadata files for specific licenses
+- **Processed datasets**: Generally available under CC-BY-4.0 unless otherwise specified
+- **External data**: Subject to original source licenses (see `/data/external/`)
+
+See [/data/README.md](./data/README.md) for detailed data licensing information.
+
+### Documentation & Educational Content (CC-BY-4.0)
+Documentation, tutorials, and educational materials are licensed under [Creative Commons Attribution 4.0 International (CC-BY-4.0)](https://creativecommons.org/licenses/by/4.0/):
+- README files and documentation
+- Tutorial notebooks (narrative portions)
+- Presentations and educational materials (unless for publication)
+
+### Research Outputs
+Materials intended for academic publication in `/manuscripts/`:
+- **Preprints & Drafts**: All rights reserved unless otherwise specified
+- **Published papers**: Subject to journal copyright agreements
+- **Figures & Tables**: All rights reserved for publication materials
+
+### Citation
+If you use this work in academic research, please cite:
+
+lk01sg. (2025). Portfolio: Systems Biology & Computational Modeling.
+GitHub repository. https://github.com/lk01sg/portfolio
+
+For specific analyses or methods, please cite relevant manuscripts when available.
+
+### Contact
+For questions about licensing, reuse, or collaboration:
+📧 [lk01sg@protonmail.com](mailto:lk01sg@protonmail.com)

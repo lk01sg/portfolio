@@ -1,6 +1,6 @@
 # Data Directory
 
-This folder contains datasets used in the portfolio. The goal is to keep raw data, processed data, small samples for demos, and references to external datasets clearly separated to support reproducible research.
+This folder contains datasets organized to support reproducible analytical workflows. The structure emphasizes clear data provenance, explicit documentation of transformations, and careful separation of raw materials from processed outputs.
 
 ---
 
@@ -22,45 +22,47 @@ This folder contains datasets used in the portfolio. The goal is to keep raw dat
 
 ## When to use each folder
 
-* **`raw/`** — Store original files as obtained from data providers or experiments. Do not modify these files in-place. Avoid committing sensitive or private data.
+* **`raw/`** — Store original files as obtained from data providers, experiments, or databases. These files should remain unmodified to preserve data provenance. Do not commit sensitive or personally identifiable information.
 
-* **`processed/`** — Store cleaned, filtered, or transformed datasets that are ready for analysis. Include a reference to the script or notebook that generated them (typically in `/code/notebooks/` or `/code/scripts/`).
+* **`processed/`** — Store cleaned, filtered, or transformed datasets ready for analysis. Each processed file should reference the script or notebook that generated it (typically in `/code/notebooks/` or `/code/scripts/`), including explicit documentation of transformation assumptions and limitations.
 
-* **`sample/`** — Small, representative subsets of data for quick demos or tests. Ensure these contain no sensitive information if derived from real data. Ideal for testing pipelines without loading full datasets.
+* **`sample/`** — Small, representative subsets of data for testing pipelines, demonstrations, or exploratory work without loading full datasets. Ensure these contain no sensitive information if derived from real data. Useful for validating analytical methods before scaling.
 
-* **`external/`** — Metadata or instructions (links, checksums, storage locations) for large datasets that cannot be stored in the repo. This includes:
-  - **`pretrained-models/`** — References to pretrained model weights (e.g., BERT, ResNet)
-  - **`embeddings/`** — Word embeddings, sentence embeddings (e.g., Word2Vec, GloVe)
-  - **`auxiliary-datasets/`** — Supporting datasets too large for the repo
+* **`external/`** — Metadata, instructions, and references (links, checksums, storage locations) for large datasets that cannot be stored directly in the repository. This includes:
+  - **`pretrained-models/`** — References to pretrained model weights (e.g., BERT, ResNet, domain-specific models)
+  - **`embeddings/`** — Molecular fingerprints, word embeddings, protein embeddings (e.g., ProtBERT, ESM)
+  - **`auxiliary-datasets/`** — Supporting datasets such as pathway databases, interaction networks, or reference annotations
 
 ---
 
-## Best practices
+## Principles for data management
 
-* Always record the transformation steps used to produce files in `processed/` (notebooks in `/code/notebooks/` or scripts in `/code/scripts/`).
-* Prefer storing provenance metadata alongside datasets (e.g., a small YAML or JSON describing source, date, and transformations).
-* Do not commit personally identifiable information (PII) or sensitive data to a public repo. Use external storage and reference it in `external/`.
-* Keep sample files small (a few MB) so the repository remains lightweight.
-* Use `.gitignore` to exclude large data files from being committed accidentally.
-* For machine learning projects, store model checkpoints in `/results/models/` rather than in `/data/`.
+* **Explicit provenance**: Always document the origin, acquisition date, and transformation pipeline for each dataset
+* **Transformation transparency**: Record all processing steps with clear references to the generating code
+* **Assumption documentation**: Note data quality issues, filtering decisions, and modeling assumptions that affect downstream interpretation
+* **Separation of concerns**: Keep raw data immutable; all transformations should produce new files in `processed/`
+* **Reproducibility**: Use version-controlled scripts for all data transformations; avoid manual editing of data files
 
 ---
 
 ## Example data workflow
 
-1. Place the downloaded/original dataset in `/data/raw/`.
-2. Run cleaning/processing scripts (notebooks in `/code/notebooks/` or scripts in `/code/scripts/`) to create `/data/processed/` files.
-3. If needed, create a small demo subset in `/data/sample/` for examples and documentation.
-4. For large datasets, add download instructions and checksums in `/data/external/` instead of committing the full data.
+1. Place the downloaded/original dataset in `/data/raw/` without modification.
+2. Document the source, license, and acquisition context in a metadata file.
+3. Run cleaning/processing scripts (in `/code/notebooks/` or `/code/scripts/`) to create files in `/data/processed/`.
+4. Document transformation assumptions, data quality decisions, and limitations.
+5. For large datasets, add download instructions and checksums in `/data/external/` instead of committing the full data.
+6. Create small demo subsets in `/data/sample/` if needed for testing or documentation.
 
 Example processing workflow:
 ```bash
-# Run preprocessing script
+# Run preprocessing script with explicit parameters
 python code/scripts/preprocess_data.py \
   --input data/raw/dataset.csv \
-  --output data/processed/dataset_clean.csv
+  --output data/processed/dataset_clean.csv \
+  --config configs/preprocessing_config.yaml
 
-# Or use a notebook
+# Or use a documented notebook
 jupyter notebook code/notebooks/01_data_preprocessing.ipynb
 ```
 
@@ -68,36 +70,59 @@ jupyter notebook code/notebooks/01_data_preprocessing.ipynb
 
 ## Metadata recommendation
 
-For each dataset, consider providing a small metadata file (YAML/JSON/MD) including:
+For each dataset, provide a metadata file (YAML/JSON/MD) documenting:
 
-* Dataset name
-* Source / license
-* Date acquired
-* Processing steps (brief description or link to script)
-* Basic statistics (rows, columns, notable features)
-* Any data quality notes or known issues
+* Dataset name and description
+* Source, license, and citation information
+* Date acquired and version (if applicable)
+* Processing steps with references to generating scripts
+* Data quality assessments and known limitations
+* Basic statistics (rows, columns, missing values, distributions)
+* Modeling assumptions or constraints relevant to downstream analysis
 
 Example metadata structure (`dataset_metadata.yml`):
 
 ```yaml
-name: "Sample Dataset"
-source: "https://example.com/data"
+name: "Sample Biological Dataset"
+source: "https://example.org/database"
 license: "CC BY 4.0"
+citation: "Author et al. (2025). Journal Name."
 date_acquired: "2026-01-08"
-processing_script: "/code/scripts/preprocess_data.py"
-rows: 10000
-columns: 25
-description: "Brief description of the dataset"
+version: "v2.1"
+
+processing:
+  script: "/code/scripts/preprocess_biological_data.py"
+  date_processed: "2026-01-09"
+  steps:
+    - "Filtered samples with <80% assay quality"
+    - "Log-transformed expression values"
+    - "Removed batch effects using ComBat"
+  assumptions:
+    - "Assumes normal distribution after log transformation"
+    - "Batch correction may reduce biological signal in rare cell types"
+
+statistics:
+  samples: 1250
+  features: 18500
+  missing_rate: 0.02
+  outliers_removed: 15
+
 quality_notes:
-  - "Contains 2% missing values in age column"
-  - "Outliers removed using IQR method"
+  - "2% missing values imputed using median"
+  - "Outliers defined as >3 SD from mean"
+  - "Potential batch confounding in samples 500-600"
+
+limitations:
+  - "Small sample size for rare subtypes"
+  - "Single time point; no temporal dynamics"
+  - "Limited to specific tissue type"
 ```
 
 ---
 
 ## External Resources
 
-For datasets stored externally (cloud storage, institutional servers), create a reference file:
+For datasets stored externally (cloud storage, institutional servers, public repositories), create reference documentation:
 
 **Example: `/data/external/pretrained-models/README.md`**
 ```markdown
@@ -105,22 +130,57 @@ For datasets stored externally (cloud storage, institutional servers), create a 
 
 ## BERT Base Uncased
 - **Source**: https://huggingface.co/bert-base-uncased
+- **Purpose**: Text embedding for literature mining
 - **Size**: 440MB
-- **Download**: `wget https://huggingface.co/...`
+- **Download**: `transformers.AutoModel.from_pretrained('bert-base-uncased')`
 - **Checksum**: sha256:abc123...
+- **License**: Apache 2.0
 
-## ResNet-50 ImageNet
-- **Source**: PyTorch Model Zoo
-- **Size**: 98MB
-- **Download**: `torch.hub.load('pytorch/vision', 'resnet50', pretrained=True)`
+## ProtBERT
+- **Source**: https://huggingface.co/Rostlab/prot_bert
+- **Purpose**: Protein sequence embeddings
+- **Size**: 1.6GB
+- **Download**: See documentation in `/code/scripts/download_protbert.py`
+- **Citation**: Elnaggar et al. (2021)
+```
+
+**Example: `/data/external/auxiliary-datasets/README.md`**
+```markdown
+# Auxiliary Datasets
+
+## KEGG Pathway Database
+- **Source**: https://www.genome.jp/kegg/
+- **Type**: Biological pathway annotations
+- **Access**: API-based retrieval (see `/code/scripts/fetch_kegg.py`)
+- **License**: Academic use only
+- **Last updated**: 2025-12
+
+## STRING Protein Interactions
+- **Source**: https://string-db.org/
+- **Version**: v11.5
+- **Size**: 2.3GB (full network)
+- **Download instructions**: `/code/scripts/download_string.sh`
 ```
 
 ---
 
-## Notes
+## Best practices
 
-* Store only non-sensitive data in the repository. Use external storage (cloud storage, institutional servers) if required and reference it in `/external/`.
-* Monitor repository size; large binary files negatively affect git performance. Use Git LFS if necessary for files > 100MB.
-* Keep documentation up-to-date when adding new datasets.
-* Coordinate with `/code/` for processing scripts and `/results/` for outputs.
-* For experiment-specific datasets, consider storing them in `/experiments/expXXX-name/data/` if they're only used in that experiment.
+* **Sensitive data**: Store only non-sensitive data in the repository. Use institutional storage with appropriate access controls for any data containing PII, patient information, or proprietary content. Reference external locations in `/external/`.
+
+* **Repository size**: Monitor repository size carefully. Large binary files degrade git performance. Use Git LFS for files > 100MB, or prefer external storage with documentation here.
+
+* **Data quality**: Document data quality issues explicitly. Transparent reporting of limitations, missing data patterns, and potential biases is essential for sound interpretation.
+
+* **Coordination**: Data processing should coordinate with `/code/` for transformation scripts and `/results/` for analytical outputs. For experiment-specific datasets used only in one analysis, consider storing them in `/experiments/expXXX-name/data/`.
+
+* **Updates**: Keep documentation current when adding new datasets. Update metadata files when reprocessing data or discovering new quality issues.
+
+---
+
+## Notes on interpretation
+
+This data directory emphasizes transparency about data provenance, transformation decisions, and limitations. The goal is to support careful interpretation of analytical results by maintaining clear documentation of assumptions and constraints introduced at the data preparation stage.
+
+For questions about specific datasets or data quality considerations:
+📧 [lk01sg@protonmail.com](mailto:lk01sg@protonmail.com)

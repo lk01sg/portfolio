@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+authors:
+  - family-names: "lk01sg"
+    email: lk01sg@protonmail.com
+title: "Portfolio: Systems Biology & Computational Modeling"
+version: 1.0.0
+date-released: 2025-01-08
+url: "https://github.com/lk01sg/portfolio"
+repository-code: "https://github.com/lk01sg/portfolio"
+license: MIT
+keywords:
+  - systems biology
+  - computational modeling
+  - systems immunology
+  - network pharmacology
+  - machine learning
+  - bioinformatics
+type: software
