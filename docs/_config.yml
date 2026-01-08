@@ -1,0 +1,32 @@
+# Site settings
+title: PhD Portfolio
+description: Research portfolio and documentation
+author: lk01sg
+email: lk01sg@protonmail.com
+
+# Build settings
+theme: jekyll-theme-primer
+# or use: minima, jekyll-theme-cayman, jekyll-theme-minimal, etc.
+
+# URLs
+baseurl: "/portfolio"
+url: "https://lk01sg.github.io"
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
