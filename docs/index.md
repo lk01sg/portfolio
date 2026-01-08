@@ -9,7 +9,7 @@ Welcome to my research portfolio and documentation site.
 
 ## About
 
-This site contains documentation, analysis notebooks, and resources from my PhD research.
+This site contains documentation, analysis notebooks, and resources from my research.
 
 ## Quick Links
 
