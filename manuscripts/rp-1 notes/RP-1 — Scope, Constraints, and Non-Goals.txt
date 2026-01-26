@@ -1,0 +1,121 @@
+RP-1 — Scope, Constraints, and Non-Goals
+
+> **Purpose**: This note explicitly defines what RP‑1 *is*, *is not*, and *will not attempt*. It exists to prevent scope creep, hype‑driven decisions, and false comparisons with industrial R&D. This document is a strategic asset, not a limitation.
+
+---
+
+## 1. Positioning Statement
+
+RP‑1 is a **solo, seed‑stage research project** designed to demonstrate *architectural thinking*, *methodological clarity*, and *scale‑readiness* — **not industrial scale itself**.
+
+RP‑1 operates as a **FRO‑seed**: a proof that a research direction is structurally sound, intellectually non‑trivial, and worth scaling by a future team or organization.
+
+---
+
+## 2. Explicit Scope (What RP‑1 Intentionally Does)
+
+RP‑1 focuses on:
+
+* **Conceptual leverage over brute force**
+* **Mechanistic or network‑level insight**, not end‑to‑end product pipelines
+* **Small, high‑value datasets** with deep annotation
+* **Reproducible, modular pipelines** that are ready to scale
+* **AI‑first reasoning**, not AI‑heavy compute
+
+Valid research activities include:
+
+* Network‑based modeling (drug–target–pathway, immune networks)
+* Systems‑level abstractions using public or modest datasets
+* Method development, benchmarking, or integration
+* Transparent documentation of assumptions, failures, and trade‑offs
+
+---
+
+## 3. Hard Constraints (Non‑Negotiable)
+
+These constraints are *design choices*, not deficiencies.
+
+### 3.1 Infrastructure Constraints
+
+* No proprietary industrial datasets
+* No HPC clusters or large‑scale GPU training
+* No robotic or high‑throughput wet‑lab automation
+
+### 3.2 Resource Constraints
+
+* Single primary researcher
+* Limited compute budget
+* Time‑bounded execution
+
+These constraints enforce **intellectual discipline**.
+
+---
+
+## 4. Non‑Goals (What RP‑1 Explicitly Refuses to Do)
+
+RP‑1 will **not**:
+
+* Compete with big‑pharma AI pipelines
+* Replicate industrial screening or discovery stacks
+* Train foundation models from scratch
+* Optimize for publication count
+* Chase LLM hype without mechanistic grounding
+
+Any task requiring:
+
+* massive proprietary data
+* continuous wet‑lab throughput
+* hundreds of GPUs
+
+is **out of scope by design**.
+
+---
+
+## 5. Rationale: Why These Limits Are Strategic
+
+Attempting to mirror industry would:
+
+* dilute intellectual signal
+* introduce unmanageable dependencies
+* weaken PhD‑level evaluation value
+
+By contrast, this scope allows RP‑1 to:
+
+* surface *new representations* and *new questions*
+* remain legible to academic evaluators
+* act as a blueprint for future scaling
+
+---
+
+## 6. Relationship to FROs and Industry
+
+RP‑1 is **FRO‑compatible**, not FRO‑complete.
+
+It is designed to answer:
+
+> *“If this worked, what organization should exist to scale it?”*
+
+—not:
+
+> *“How do I scale this alone?”*
+
+This distinction is intentional.
+
+---
+
+## 7. Evaluation Criteria
+
+RP‑1 is successful if:
+
+* its core idea survives critique under these constraints
+* its pipeline can be reused or extended by others
+* it clarifies *what scaling would require*
+* it attracts interest from collaborators, not imitation attempts
+
+---
+
+## 8. Final Principle
+
+> **Constraints are the architecture.**
+
+RP‑1 treats limits as a forcing function for clarity, originality, and future relevance.

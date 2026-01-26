@@ -1,0 +1,124 @@
+RP-1 — Source Notes
+
+## Progress Conference 2025 & the Rise of Metascience
+
+> **Role of this note**: Canonical *source-derived* reference for RP‑1. This document captures **external signals, claims, and tensions** from the Progress Conference 2025 (as reported by Big Think), separated from strategy synthesis.
+
+---
+
+## 1. What Metascience Looks Like *in Practice* (2025)
+
+Metascience has moved from critique to construction. The ecosystem is actively building:
+
+* new research organizations
+* new funding mechanisms
+* new definitions of scientific output
+
+The emphasis is no longer on reforming peer review or publishing norms, but on **re‑architecting the entire production stack of science**.
+
+---
+
+## 2. Dataset‑First Science
+
+A core shift highlighted at the conference:
+
+> **Datasets, not papers, are becoming the primary scientific artifact.**
+
+Key ideas:
+
+* Preserve biological complexity instead of simplifying it for human comprehension.
+* Store noise, failed experiments, background measurements, and lab context.
+* Design datasets that are *AI‑native*, not human‑curated summaries.
+
+Example direction:
+
+* “Protein Data Bank 2.0” — richer, messier, more complete biological records intended for machine reasoning.
+
+Implication:
+
+* Reproducibility emerges from *process transparency*, not post‑hoc statistical policing.
+
+---
+
+## 3. AI as a Scientific Operator
+
+AI is framed not as a tool but as a **participant** in research workflows:
+
+* hypothesis generation
+* experiment prioritization
+* pattern discovery across noisy biological data
+
+This reframes scientists as **system designers**, not just analysts.
+
+---
+
+## 4. Focused Research Organizations (FROs)
+
+FROs address a structural gap:
+
+* Projects too large, infrastructural, or engineering‑heavy for academia
+* Too long‑horizon or uncertain for venture‑backed industry
+
+Characteristics:
+
+* mission‑locked
+* milestone‑driven
+* team‑based (not PI‑centric)
+
+Goal:
+
+* Build *trunks of the technology tree* that downstream research can build upon.
+
+---
+
+## 5. New Funding Logic
+
+Traditional grant systems are viewed as:
+
+* conservative
+* proposal‑heavy
+* hostile to infrastructure and long‑term bets
+
+Alternatives discussed:
+
+* pull‑based funding (pay for outcomes)
+* flexible agencies (e.g., ARIA‑style)
+* long‑horizon endowments (speculative, unresolved)
+
+Open tension:
+
+* Outcome‑based funding risks undervaluing curiosity‑driven, exploratory science.
+
+---
+
+## 6. Unresolved Risks & Critiques
+
+Despite optimism, key concerns remain:
+
+* Will infrastructure‑centric science crowd out conceptual breakthroughs?
+* Can milestone logic coexist with genuine uncertainty?
+* Who funds science when goals cannot be specified in advance?
+
+These are open design problems, not settled conclusions.
+
+---
+
+## 7. Why This Matters for RP‑1
+
+This source establishes the **external rationale** for RP‑1 design choices:
+
+* emphasis on datasets over publications
+* reproducibility as a first‑class output
+* portfolio‑style execution instead of single papers
+* alignment with post‑academic research models
+
+This note should be treated as **evidence of landscape awareness**, not strategy.
+
+---
+
+## 8. Relationship to Other RP‑1 Notes
+
+* **RP‑1 — Metascience, Strategy, and Execution Notes** → *internal synthesis & positioning*
+* **This document** → *external signal capture & grounding*
+
+Do not merge. Separation preserves epistemic clarity.

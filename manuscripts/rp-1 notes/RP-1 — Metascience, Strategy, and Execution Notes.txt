@@ -1,0 +1,110 @@
+RP-1 — Metascience, Strategy, and Execution Notes
+
+> **Context**: Research Project #1 (RP-1) — positioning an AI‑first, data‑centric scientific portfolio aligned with global metascience trends (Progress Conference 2025).
+
+---
+
+## 1. Executive Summary
+
+Metascience is no longer commentary; it is infrastructure. The frontier has shifted from papers to **datasets, pipelines, and organizations**. AI‑native workflows, alternative funding, and Focused Research Organizations (FROs) redefine how impactful science is built. RP‑1 is designed to exploit this shift with asymmetric leverage: **unique data + reproducible pipelines + clear milestones**.
+
+---
+
+## 2. Core Metascience Principles (2025)
+
+* **Dataset‑first science**: Data + metadata + notebooks are primary outputs; papers are derivatives.
+* **AI‑native research**: Preserve complexity (noise included); let models extract structure.
+* **Reproducibility by default**: Open lab books, versioned pipelines, transparent decisions.
+* **Org innovation**: FROs fill the gap between academia and industry for medium‑scale, engineering‑heavy science.
+* **Outcome‑driven funding**: Milestones > proposals; pull‑funding and flexible capital rise.
+
+---
+
+## 3. Asia‑Pacific Advantage
+
+Asia should not imitate; it should leapfrog.
+
+**Structural edges**:
+
+* Unique domains: biodiversity, tropical disease, pharmacogenomics of Asian populations.
+* Lower costs: viable AI + low‑cost wetlab hybrids.
+* Faster iteration: fewer legacy constraints.
+
+**Strategic play**: Own data niches others cannot replicate.
+
+---
+
+## 4. RP‑1 Strategic Focus
+
+**North Star**: Build a small but irreplaceable open dataset + end‑to‑end pipeline that demonstrates AI‑first, reproducible science.
+
+**Candidate themes** (pick one):
+
+* Network pharmacology of tropical medicinal plants.
+* Immune‑dynamics modeling for dengue/malaria.
+* AI‑first protein structure workflows on tropical proteomes.
+* Metabolomics + systems biology for herbal drugs.
+
+---
+
+## 5. Deliverables (Non‑Negotiable)
+
+* **Open Dataset v1** (small, unique, well‑annotated).
+* **Reproducible Pipeline** (Quarto + GitHub): data → analysis → figures.
+* **Open Lab Book**: decisions, failures, assumptions.
+* **Executable Milestones**: clear progress checkpoints.
+
+---
+
+## 6. 6–12 Month Execution Plan
+
+**Months 1–2**
+
+* Finalize RP‑1 theme.
+* Define schema + metadata standards.
+* Scaffold repo (Quarto, CI, versioning).
+
+**Months 3–5**
+
+* Build Dataset v1.
+* Implement baseline models (network analysis / docking / PK‑PD).
+* Release reproducible notebook.
+
+**Months 6–9**
+
+* Expand dataset (v2).
+* Stress‑test reproducibility.
+* External feedback + iteration.
+
+**Months 10–12**
+
+* Package as portfolio artifact.
+* Funding outreach (Emergent Ventures, Convergent Research, Schmidt Futures).
+* Position for PhD applications / FRO collaboration.
+
+---
+
+## 7. Funding & Collaboration Targets
+
+* **Emergent Ventures** — asymmetric ideas, small teams.
+* **Convergent Research** — FRO‑style projects.
+* **Schmidt Futures** — unconventional talent + AI.
+
+Pitch with *deliverables*, not pedigree.
+
+---
+
+## 8. Success Criteria
+
+* Dataset cited or reused.
+* Pipeline cloned and executed by others.
+* External collaborators initiate contact.
+* RP‑1 clearly signals readiness for frontier PhD/FRO environments.
+
+---
+
+## 9. Final Thesis
+
+> *Stop optimizing for publication. Start compounding infrastructure.*
+
+RP‑1 is not a paper. It is a **proof‑of‑execution** in the new science economy.
